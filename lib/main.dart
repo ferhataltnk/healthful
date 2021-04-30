@@ -103,7 +103,8 @@ class MainPage extends StatelessWidget {
 
           children: <Widget>[
             Container(
-            margin: EdgeInsets.only(bottom: 10),
+              height: MediaQuery.of(context).size.height/5.5,
+           // margin: EdgeInsets.only(bottom: 10),
               decoration: BoxDecoration(
                 shape: BoxShape.rectangle,
                 color: Colors.white.withAlpha(700),
@@ -113,7 +114,7 @@ class MainPage extends StatelessWidget {
               ),
               child: SafeArea(
                 child: Container(
-                 padding: EdgeInsets.symmetric(vertical: 35,horizontal: 35),
+                 padding: EdgeInsets.symmetric(vertical: MediaQuery.of(context).size.width/15 ,horizontal: 35),
                   child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     //  crossAxisAlignment: CrossAxisAlignment.center,
@@ -363,8 +364,10 @@ class MainPage extends StatelessWidget {
 
             ///////////////////////////////////
             Container(
+              height: MediaQuery.of(context).size.height/12,
+              width: MediaQuery.of(context).size.width/3 ,
                padding: EdgeInsets.all(5.0),
-              margin: EdgeInsets.symmetric(horizontal: 120.0,vertical: 3),
+            //  margin: EdgeInsets.symmetric(horizontal: 120.0,vertical: 3),
               decoration: BoxDecoration(
                   shape: BoxShape.rectangle,
                   color: Colors.white.withAlpha(650),
@@ -377,7 +380,7 @@ class MainPage extends StatelessWidget {
                       icon: Icon(
                         Icons.home_filled,
                         color: Colors.black87,
-                        size: 30,
+                     //   size: 30,
                       ),
                       tooltip: "Ana Sayfa",
                       onPressed: () {
@@ -388,7 +391,7 @@ class MainPage extends StatelessWidget {
                       icon: Icon(
                         Icons.person,
                         color: Colors.black87,
-                        size: 30,
+                      //  size: 30,
                       ),
                       tooltip: "Kullanıcı Bilgileri",
                       onPressed: () {
