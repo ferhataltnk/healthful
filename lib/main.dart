@@ -103,8 +103,7 @@ class MainPage extends StatelessWidget {
 
           children: <Widget>[
             Container(
-              height: MediaQuery.of(context).size.height/5.5,
-           // margin: EdgeInsets.only(bottom: 10),
+              height: MediaQuery.of(context).size.height/5.5, ///buraya geldiysen bunu sil ve bırak///
               decoration: BoxDecoration(
                 shape: BoxShape.rectangle,
                 color: Colors.white.withAlpha(700),
@@ -114,10 +113,10 @@ class MainPage extends StatelessWidget {
               ),
               child: SafeArea(
                 child: Container(
-                 padding: EdgeInsets.symmetric(vertical: MediaQuery.of(context).size.width/15 ,horizontal: 35),
+                 padding: EdgeInsets.symmetric(vertical: MediaQuery.of(context).size.height/25,horizontal: MediaQuery.of(context).size.width/25),
                   child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    //  crossAxisAlignment: CrossAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
                       Text(
                       "Merhaba\n ${user.adU}",
@@ -152,7 +151,7 @@ class MainPage extends StatelessWidget {
               ),
             ),
             Container(
-                  height: MediaQuery.of(context).size.height /3.4,
+                  height: MediaQuery.of(context).size.height/4.5+50 ,
                 child: new ListView(
                   scrollDirection: Axis.horizontal,
                   children: <Widget>[
@@ -166,7 +165,7 @@ class MainPage extends StatelessWidget {
                           Container(
                           margin: EdgeInsets.symmetric(horizontal: 5),
                             width: 140.0,
-                            height:  MediaQuery.of(context).size.height /4.3,
+                            height:  MediaQuery.of(context).size.height /4.5,
                             decoration: BoxDecoration(
                                 image: DecorationImage(
                                     image: AssetImage("assets/images/mainBfast.jpg"),
@@ -189,7 +188,7 @@ class MainPage extends StatelessWidget {
                           Container(
                             margin: EdgeInsets.symmetric(horizontal: 5),
                             width: 140.0,
-                            height: MediaQuery.of(context).size.height /4.3,   //Bütün ölçüleri buna benzer şekilde vereceğim
+                            height: MediaQuery.of(context).size.height /4.5,   //Bütün ölçüleri buna benzer şekilde vereceğim
                             decoration: BoxDecoration(
                                 image: DecorationImage(
                                     image: AssetImage("assets/images/mainJuice.jpg"),
@@ -212,7 +211,7 @@ class MainPage extends StatelessWidget {
                           Container(
                             margin: EdgeInsets.symmetric(horizontal: 5),
                             width: 140.0,
-                            height:  MediaQuery.of(context).size.height /4.3,
+                            height:  MediaQuery.of(context).size.height /4.5,
                             decoration: BoxDecoration(
                                 image: DecorationImage(
                                     image: AssetImage("assets/images/mainDinner.jpg"),
@@ -235,7 +234,7 @@ class MainPage extends StatelessWidget {
                           Container(
                             margin: EdgeInsets.symmetric(horizontal: 5),
                             width: 140.0,
-                            height:  MediaQuery.of(context).size.height /4.3,
+                            height:  MediaQuery.of(context).size.height /4.5,
                             decoration: BoxDecoration(
                                 image: DecorationImage(
                                     image: AssetImage("assets/images/mainDessert.jpg"),
@@ -261,7 +260,6 @@ class MainPage extends StatelessWidget {
               ),
             ),
             Container(
-                margin: EdgeInsets.symmetric(vertical: 10.0),
                 height: MediaQuery.of(context).size.height /3.4,
                 child: new ListView(
                   scrollDirection: Axis.horizontal,
@@ -362,48 +360,44 @@ class MainPage extends StatelessWidget {
                   ],
                 )),
 
-            ///////////////////////////////////
-            Container(
-              height: MediaQuery.of(context).size.height/12,
-              width: MediaQuery.of(context).size.width/3 ,
-               padding: EdgeInsets.all(5.0),
-            //  margin: EdgeInsets.symmetric(horizontal: 120.0,vertical: 3),
-              decoration: BoxDecoration(
-                  shape: BoxShape.rectangle,
-                  color: Colors.white.withAlpha(650),
-                  borderRadius: BorderRadius.circular(20)
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-                  IconButton(
-                      icon: Icon(
-                        Icons.home_filled,
-                        color: Colors.black87,
-                     //   size: 30,
-                      ),
-                      tooltip: "Ana Sayfa",
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/', arguments: user);
-                      }),
 
-                  IconButton(
-                      icon: Icon(
-                        Icons.person,
-                        color: Colors.black87,
-                      //  size: 30,
-                      ),
-                      tooltip: "Kullanıcı Bilgileri",
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/kullanici',arguments: user);
-                      })
-                ],
-              ),
-            ),
+
           ],
         ),
       ),
+      bottomNavigationBar: Container(
 
+        height: MediaQuery.of(context).size.height/15,
+
+
+
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+            IconButton(
+                icon: Icon(
+                  Icons.home_filled,
+                  color: Colors.black87,
+                  size: 30,
+                ),
+                tooltip: "Ana Sayfa",
+                onPressed: () {
+                  Navigator.pushNamed(context, '/', arguments: user);
+                }),
+
+            IconButton(
+                icon: Icon(
+                  Icons.person,
+                  color: Colors.black87,
+                  size: 30,
+                ),
+                tooltip: "Kullanıcı Bilgileri",
+                onPressed: () {
+                  Navigator.pushNamed(context, '/kullanici',arguments: user);
+                })
+          ],
+        ),
+      ),
     );
   }
 }
