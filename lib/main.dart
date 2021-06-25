@@ -140,13 +140,13 @@ class _MainPageState extends State<MainPage> {
                           "Merhaba\n ${userCredential.getCurrentUser("isim")}",
                           style: TextStyle(
                             color: Colors.grey[800],
-                            fontSize: 25.0,
+                            fontSize: 22.0,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
 
                            CircleAvatar(
-                             radius: 35,
+                             radius: 32,
                             child: Container(
                               width: 200,
                               height: 200,
