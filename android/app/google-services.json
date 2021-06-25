@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "445023753332",
+    "project_id": "healthful-52b6b",
+    "storage_bucket": "healthful-52b6b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:445023753332:android:883cf7a8073bc99333ad21",
+        "android_client_info": {
+          "package_name": "com.example.healthful"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "445023753332-th1085gh1krt7kjdgc73m3tgpi7lv4bk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.healthful",
+            "certificate_hash": "737756aef87beb3929daf2a083242a38f1c9e608"
+          }
+        },
+        {
+          "client_id": "445023753332-96i62qdovfd4ls6e3ql2eo1solgmg1ob.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKCxHSLMQ1l3Dqt5my2wePRfRk315fY4E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "445023753332-96i62qdovfd4ls6e3ql2eo1solgmg1ob.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
